@@ -177,6 +177,10 @@ a{
     }
 }
 @media screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
     .logo{
         width: 50%;
     }
@@ -201,8 +205,9 @@ a{
         width: 25rem;
     }   
     .center .cta{
-        width: 20rem;
+        width: 16rem;
         height: 4rem;
+        margin-bottom:3rem ;
     }
     
 }
