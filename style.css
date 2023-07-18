@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
+font-family: 'Raleway', sans-serif;
+}
+:root{
+    --black: #212121;
+    --gold: #CA8F05;
+    --white: #fff;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/bg.png");
+}
+.logo{
+    width: 100%;
+    margin: 1.5rem;
+    height: 50px;
+}
+.center{
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+.center h1{
+    font-size: 70px;
+    text-align: center;
+    font-weight: 500;
+    padding: 12px;
+}
+.center .txt{
+    padding: 12px;
+    width: 28rem;
+    text-align: center;
+    font-size: 23px;
+}
+.center .mainImg{
+    margin: 2rem;
+    background-image: url("./imgs/mainBg.png");
+    width: 34rem;
+    height: 22rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 20px 30px 0px rgba(51, 51, 51, 0.25);
+}
+.center .cta{
+    text-transform: uppercase;
+    color: var(--white);
+    display: flex;
+    width: 26rem;
+    height: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 3px;
+    background: var(--gold);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    z-index: 10000;
+}
+.center .cta:hover{
+    scale: 1.1;
+}
+.float{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.float .theTop,
+.float .theBottom{
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.float .theTop .topLeft,
+.float .theTop .topRight{
+    width: 8rem;
+    height: 7rem;
+    box-shadow: 20px 20px 20px 0px rgba(51, 51, 51, 0.25);
+}
+.float .theBottom .bottomLeft,
+.float .theBottom .bottomRight{
+    width: 6rem;
+    height: 5rem;
+    transform: translateX(40rem);
+    transform: translateY(40rem);
+    box-shadow: 20px 20px 20px 0px rgba(51, 51, 51, 0.25);
+}
+.float .theTop .topLeft{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/topLeft.png");
+    position: absolute;
+    left: 5%;
+    top: 1.5rem;
+    animation: float 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate-reverse both;
+}
+.float .theTop .topRight{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/topRight.png");
+    position: absolute; 
+    right: 5%;
+    top: 1.5rem;
+    animation: float 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.4s infinite alternate-reverse both;
+}
+.float .theBottom .bottomLeft{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/bottomLeft.png");
+    position: absolute; 
+    animation: float 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s infinite alternate-reverse both;
+}
+.float .theBottom .bottomRight{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/bottomRight.png");
+    position: absolute; 
+    right: 17%;
+    animation: float 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.3s infinite alternate-reverse both;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+@keyframes float {
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: -3%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    body{
+        background-image: none;
+    }
+    .center .mainImg{
+        width: 30rem;
+    }
+    .float .theBottom .bottomLeft{
+        left: 5%;
+    }
+    .float .theBottom .bottomRight{
+        right: 5%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .center .mainImg{
+        width: 25rem;
+        height: 20rem;
+    }
+    .center .float,
+    .center .theBottom,
+    .center .theTop,
+    .float .theBottom .bottomLeft,
+    .float .theBottom .bottomRight,
+    .float .theTop .topLeft,
+    .float .theTop .topRight{
+        display: none;
+    }
+}
