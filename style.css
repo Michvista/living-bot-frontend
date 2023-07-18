@@ -177,8 +177,11 @@ a{
     }
 }
 @media screen and (max-width: 600px) {
+    .logo{
+        width: 50%;
+    }
     .center .mainImg{
-        width: 25rem;
+        width: 20rem;
         height: 20rem;
     }
     .center .float,
@@ -190,4 +193,15 @@ a{
     .float .theTop .topRight{
         display: none;
     }
+    .center h1{
+        font-size: 45px;
+    }
+    .center .txt{
+        font-size: 20px;
+    }   
+    .center .cta{
+        width: 20rem;
+        height: 4rem;
+    }
+    
 }
